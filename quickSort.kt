@@ -1,6 +1,6 @@
 /* Name: Ezekiel Holmes
  * Description: A complex quickSorting program written in Kotlin (ported from a Java example)
- * prints a sorted (smallest to largest) array of integer ranging from 1-10
+ * Prints a sorted (smallest to largest) array of integers ranging from 1-10
  */
 fun swap(arr:Array<Int>, i: Int, j: Int) {
     var temp = arr[i]
