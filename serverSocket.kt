@@ -26,10 +26,10 @@ fun main(args: Array<String>) {
     while (true) {
         //Accept a new client connection
         val clientConnection = server.accept()
-        println("Client connection established: ${client.inetAddress.hostAddress}")
+        println("Client connection established")
 
         // Spin up a new thread to handle the client 
-        thread { ProcessClientConnection(client).run() }
+        thread { ProcessClientConnection(clientConnection).run() }
     }
 }
 
@@ -46,7 +46,7 @@ class ProcessClientConnection(client: Socket) {
         isOn = true
 
         //Let client know that server accepted the client connection
-        output.write("Successfully connection the the server....\n")
+        write("Successfully connection the the server....\n")
 
         //Maintain connection to server until client enters exit command
         while (isOn) {
@@ -60,7 +60,8 @@ class ProcessClientConnection(client: Socket) {
                 }
             try {
                 //Send a message to the client
-                output.write("You are connected to the server.\n")
+                val message = "You are connected to the server.\n"
+                write(message)
             }catch(exception: Exception) {
                     //Something went wrong close the connection, print error message
                     client.close()
@@ -71,5 +72,9 @@ class ProcessClientConnection(client: Socket) {
                     println("Bye")
             }
         }
+    }
+        //private method used to send message to the client
+        private fun write(input: String) {
+        output.write((input + '\n').toByteArray(Charset.defaultCharset()))
     }
 }
