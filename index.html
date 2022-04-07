@@ -70,8 +70,7 @@
        <br />
     </code>
 
-    <h1>Introductory Example 2</h1>
-    <p>This is an example of....</p>
+
 
     <h1>Introductory Example: Conditionals</h1>
     <p>This is an example of conditionals in kotlin</p>
@@ -144,6 +143,38 @@
             }
             <br/>
             </code>
+
+    
+    <h1>Introductory Example 2</h1>
+    <p>This is an example of copying the contents in an array in Kotlin using a function.</p>
+    <code>
+        /* Name: Baley Wilson
+        <br />
+         * Description: A simple program written in Kotlin demonstrating the array functionality using a function.
+        <br />
+         * Copys the contents of an array into another array and prints results to verify.
+        <br />
+        */
+        <br />
+        fun copyArray(source: IntArray): IntArray {
+        <br />
+            return source.copyOf(source.size)
+        <br />
+        }
+        <br />
+        fun main() {
+        <br />
+        val A = intArrayOf(1, 2, 3, 4, 5)
+        <br />
+        val copy = copyArray(A)
+        <br />
+        println(copy.contentToString())
+        <br />
+       }
+       <br />
+    </code>
+
+
     <h1>Introductory Example 4</h1>
     <p>Here is an example of a simple Kotlin program that does basic summation</p>
     <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/sum.kt" target="_blank">Kotlin Summation Program</a>
@@ -151,7 +182,7 @@
     <h1>Introductory Example 5</h1>
     <p>This is an example of....</p>
 
-    <h1>Introductory Example 5</h1>
+    <h1>Introductory Example 6</h1>
     <p>This is an example of....</p>
 
     <h1>Complex Example 1</h1>
