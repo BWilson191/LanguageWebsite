@@ -5,8 +5,6 @@
     <title>Language Website - Team Salmon</title>
 </head>
 
-<body>
-
     <h1 style="text-align:center;font-size:75px;">Language Website - Team Salmon</h1>
     <p style="text-align: center;">This is a simple website used to display the syntax of the programming language Kotlin.</p>
 
@@ -184,7 +182,40 @@
     <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/sum.kt" target="_blank">Kotlin Summation Program</a>
 
     <h1>Introductory Example 5</h1>
-    <p>This is an example of....</p>
+    <p>This is an example of using a scanner and reading user input in Kotlin.</p>
+    <code>
+        /** Samantha Farmer
+        <br />
+        * Shows how to use a scanner and store inputed variables
+        <br />
+        * Prints a statement based on the users answers and calculates age.
+        <br />
+        */
+        <br />
+        import java.util.Scanner
+        <br />
+        fun main(args: Array<String>){
+            <br />
+            val reader = Scanner(System.`in`)
+            <br />
+            print("Please enter your name: ")
+            <br />
+            var name = readLine()
+            <br />
+            print("Please enter your birth year: ")
+            <br />
+            var year: Int = reader.nextInt()
+            <br />
+            print("Please enter your favorite animal: ")
+            <br />
+            var animal = readLine()
+            <br />
+            var age: Int = 2022 - year
+            <br />
+            println("You were born in $year making you $age years old and your favorite animal is $animal, how cute!")
+            <br />
+        }
+    </code>
 
     <h1>Introductory Example 6</h1>
     <p>This is an example of....</p>
@@ -206,7 +237,9 @@
     <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/quickSort.kt" target="_blank">Kotlin quickSort Program</a>
 
     <h1>Complex Example 5</h1>
-    <p>This is an example of....</p>
+    <p>This is an example of a linked list in Kotlin and creatubg a Node data structure.</p>
+    <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/LinkedList.kt" target="_blank">Kotlin Linked List Program</a>
+    <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/Node.kt" target="_blank">Kotlin Node Class</a>  
 
     <h1>Complex Example 6</h1>
     <p>This is an example of....</p>
