@@ -84,17 +84,23 @@
         <br/>
             fun main(args: array<string>) {
             <br />
+            &emsp;var w = 15
+            <br />
             &emsp;var x = 3
             <br />
             &emsp;var y = -1
             <br />
             &emsp;var z = 10
             <br />
-            &emsp;if (x <= y && x <=z) {
+            &emsp;if (w <= x && w <= y && w <=z) {
+            <br />
+            &emsp;&emsp;println("w is the minimum")
+            <br/> 
+            &emsp;} else if (x <=w && x <= y && x <=z) {
             <br />
             &emsp;&emsp;println("x is the minimum")
             <br/> 
-            &emsp;} else if (y <= x && y <= z) {
+            &emsp;} else if (y <= w && y <= x && y <= z) {
             <br/>
             &emsp;&emsp;println("y is the minimum")
             <br/>
@@ -125,9 +131,11 @@
             <br />
             &emsp;when {
             <br />
-            &emsp;&emsp;(x <= y && x <=z) -> println("x is the minimum")
+            &emsp;&emsp;(w <= x && w <= y && w <=z) -> println("w is the minimum")
             <br/> 
-            &emsp;&emsp;(y <= x && y <= z) -> println("y is the minimum")
+            &emsp;&emsp;(x <= w && x <= y && x <=z) -> println("x is the minimum")
+            <br/> 
+            &emsp;&emsp;(y <= w && y <= x && y <= z) -> println("y is the minimum")
             <br/>
             &emsp;&emsp;else -> println("z is the minimum")
             <br/>
