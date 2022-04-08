@@ -218,7 +218,32 @@
     </code>
 
     <h1>Introductory Example 6</h1>
-    <p>This is an example of....</p>
+    <code>
+        /*
+        * Javier Trejo
+        * Simple program that shows variable instantiation
+        * and a few examples of casting.
+        */
+
+        fun main(args: Array<String>) {
+        var num = 5                     //Type interference
+        var num2 = 2.0
+        var total = num + num2
+        println(total)                  //Automatic cast
+
+        var doubleNum = num.toDouble()  //Manual cast
+        println(doubleNum)
+
+        var aNum: Int = 5               //Explicit type specification
+        //var aDouble: Int 5         ->  Can't do this
+        var aDouble: Double = 10.0
+
+        var word = "hello"
+        var letter: Char = 'a'
+        var stringLetter = letter.toString()
+        println(stringLetter)
+        }
+    </code>
 
     <h1>Server Socket</h1>
     <p>This is an example a simple example of a server socket writtin in Kotlin.</p>
@@ -242,7 +267,7 @@
     <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/Node.kt" target="_blank">Kotlin Node Class</a>  
 
     <h1>Complex Example 6</h1>
-    <p>This is an example of....</p>
+    <p>This is an example of simple inheritance in Kotlin</p>
 
     <h1>Tabular Comparison of Characteristics and Features, with respect to other (representative) languages</h1>
     <p>Insert Comparison</p>
