@@ -3,6 +3,14 @@
 
 <head>
     <title>Language Website - Team Salmon</title>
+    <style>
+        pre code {
+            background-color: #fff;
+            border: 1px solid #999;
+            display: block;
+            padding: 20px;
+        }
+    </style>
 </head>
 
     <h1 style="text-align:center;font-size:75px;">Language Website - Team Salmon</h1>
@@ -190,7 +198,26 @@
 
     <h1>Introductory Example: Array Summation</h1>
     <p>Here is an example of a simple Kotlin program that does basic summation</p>
-    <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/sum.kt" target="_blank">Kotlin Summation Program</a>
+    <a href="https://pl.kotl.in/33_xjeHG5" target="_blank">Kotlin Summation Program</a>
+    <pre>
+        <code>
+/* Name: Ezekiel Holmes
+*  Description: A simple summation program written in kotlin.
+*  Prints "15" to the console on a new line.
+*/
+
+fun main(args: Array<String>) {
+    val nums = arrayOf<Int>(1,2,3,4,5)
+    var sum = 0
+
+    for(i in 0..nums.size-1) {
+        sum+=nums[i]  
+    }
+
+    println("$sum")
+}
+        </code>
+    </pre>
 
     <h1>Introductory Example 5</h1>
     <p>This is an example of using a scanner and reading user input in Kotlin.</p>
@@ -273,7 +300,53 @@
 
     <h1>Complex Example: quickSort</h1>
     <p>Here is an example of a Kotlin program that implements a quicksorting algorithm on a given array</p>
-    <a href="https://github.com/BWilson191/LanguageWebsite/blob/main/quickSort.kt" target="_blank">Kotlin quickSort Program</a>
+    <a href="https://pl.kotl.in/8A4pEcBXS" target="_blank">Kotlin quickSort Program</a>
+    <pre>
+        <code>
+/* Name: Ezekiel Holmes
+* Description: A complex quickSorting program written in Kotlin (ported from a Java example)
+* Prints a sorted (smallest to largest) array of integers ranging from 1-10
+*/
+fun swap(arr:Array<Int>, i: Int, j: Int) {
+    var temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+}
+
+fun partition(arr:Array<Int>, low: Int, hi: Int): Int {
+    var pivot = arr[hi]
+    var i = low -1
+    
+    for(j in low..hi) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr, i, j)
+        }
+    }
+    swap(arr, i+1, hi)
+    return (i+1)
+}
+
+fun quickSort(numbers:Array<Int>, low: Int, hi: Int) {
+    if (low < hi) {
+        var part = partition(numbers, low, hi)
+        quickSort(numbers, low, part - 1)
+        quickSort(numbers, part+1, hi)
+    }
+}
+
+fun main() {
+    val nums = arrayOf<Int>(5,10,2,3,7,4,1,9,8,6)
+    
+    quickSort(nums, 0, nums.size - 1)
+        
+    nums.forEach{
+        System.out.print(it)
+        print(", ")
+    }
+}
+        </code>
+    </pre>
 
     <h1>Complex Example 5</h1>
     <p>This is an example of a linked list in Kotlin and creatubg a Node data structure.</p>
