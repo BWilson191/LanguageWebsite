@@ -57,22 +57,21 @@ class ProcessClientConnection(client: Socket) {
                     client.close()
                     println("Client disconnected....")
                     continue
-                }
-            try {
+                }try{
                 //Send a message to the client
                 val message = "You are connected to the server.\n"
                 write(message)
-            }catch(exception: Exception) {
+                }catch(exception: Exception) {
                     //Something went wrong close the connection, print error message
                     client.close()
                     println(exception.message)
-            }finally {
+                }finally {
                     //After everything close the client connection
                     client.close()
                     println("Bye")
+                }
             }
         }
-    }
         //private method used to send message to the client
         private fun write(input: String) {
         output.write((input + '\n').toByteArray(Charset.defaultCharset()))
