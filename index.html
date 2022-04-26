@@ -264,22 +264,22 @@ fun main(args: Array<String>) {
         */<br>
 
         fun main(args: Array<String>) {<br>
-        var num = 5                     //Type interference<br>
-        var num2 = 2.0<br>
-        var total = num + num2<br>
-        println(total)                  //Automatic cast<br>
+            var num = 5                     //Type inference<br>
+            var num2 = 2.0<br>
+            var total = num + num2<br>
+            println(total)                  //Automatic cast<br>
 
-        var doubleNum = num.toDouble()  //Manual cast<br>
-        println(doubleNum)<br>
+            var doubleNum = num.toDouble()  //Manual cast<br>
+            println(doubleNum)<br>
 
-        var aNum: Int = 5               //Explicit type specification<br>
-        //var aDouble: Int 5         ->  Can't do this<br>
-        var aDouble: Double = 10.0<br>
+            var aNum: Int = 5               //Explicit type specification<br>
+            //var aDouble: Int 5         ->  Can't do this<br>
+            var aDouble: Double = 10.0<br>
 
-        var word = "hello"<br>
-        var letter: Char = 'a'<br>
-        var stringLetter = letter.toString()<br>
-        println(stringLetter)<br>
+            var word = "hello"<br>
+            var letter: Char = 'a'<br>
+            var stringLetter = letter.toString()<br>
+            println(stringLetter)<br>
         }<br>
     </code>
 
