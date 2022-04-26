@@ -12,7 +12,7 @@ class KotlinAVLTree {
         root = AVLNode(key,0,null,null)
     }
 
-    fun main(){
+    fun main(args: Array){
         val mytree = KotlinAVLTree(8)
         mytree.insert(4)
         mytree.insert(9)
